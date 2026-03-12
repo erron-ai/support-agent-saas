@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "support-agent-saas"
+version = "0.1.0"
+description = "Support automation SaaS template with KB upload, widget, analytics, and escalation queue."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/support-agent-saas"
+Issues = "https://github.com/erron-ai/support-agent-saas/issues"
+
+[project.scripts]
+support-agent-saas = "support_agent_saas.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
